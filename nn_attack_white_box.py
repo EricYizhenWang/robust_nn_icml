@@ -58,7 +58,6 @@ def find_adv_direction(y_train, y_pts, train, pts, mapping):
             direction[i] = temp
         distance[i] = min_d2
     
-    #print sd1/c, sd2/c
     return [np.array(direction), distance]
 
 def generate_adv(eps, direction, pts, distance):

@@ -91,9 +91,6 @@ def standard_nn(X_train, y_train, X_test, y_test, X_extra, y_extra, ep):
         test_acc = 1-(adv*1.0/n_test)
         standard_acc.append(test_acc)
         
-        #data_folder = "./experiment_results/latest/adv_examples"
-        #fname = data_folder+TASK+FLAG+'standard'+'adv'
-        #np.save(fname, adv_test[:200])
     return [standard_acc, [acc_train, acc_extra, acc_original]]
 
 
@@ -364,7 +361,7 @@ if __name__ == "__main__":
         eps_aug_all = 2.5
         eps_adv = 8
         eps_max = 8
-        num_exp = 5
+        num_exp = 1
         C = 0.1
         n = 500
         m = 200
